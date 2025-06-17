@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 - AI运营专员</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9f3',
+                            100: '#dcf2e3',
+                            200: '#bce5cb',
+                            300: '#8dd3a8',
+                            400: '#5ab67d',
+                            500: '#3a9b5c',
+                            600: '#2d7c47',
+                            700: '#25623a',
+                            800: '#1f4f30',
+                            900: '#1b4229',
+                        },
+                        accent: {
+                            50: '#f7fee7',
+                            100: '#ecfccb',
+                            200: '#d9f99d',
+                            300: '#bef264',
+                            400: '#a3e635',
+                            500: '#84cc16',
+                            600: '#65a30d',
+                            700: '#4d7c0f',
+                            800: '#3f6212',
+                            900: '#365314',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'scale-in': 'scaleIn 0.6s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .dark .glass-effect {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3a9b5c, #84cc16);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-card {
+            transition: all 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(58, 155, 92, 0.15);
+        }
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(58, 155, 92, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-800 dark:to-primary-900 min-h-screen transition-colors duration-300">
+    <!-- 背景装饰 -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-10 left-10 w-20 h-20 bg-primary-200 dark:bg-primary-700 rounded-full opacity-30 animate-float"></div>
+        <div class="absolute top-32 right-20 w-16 h-16 bg-accent-200 dark:bg-accent-700 rounded-full opacity-20 animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-20 left-1/4 w-24 h-24 bg-primary-300 dark:bg-primary-600 rounded-full opacity-25 animate-float" style="animation-delay: 4s;"></div>
+        <div class="absolute bottom-40 right-1/3 w-12 h-12 bg-accent-300 dark:bg-accent-600 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+    </div>
+
+    <div class="relative z-10 container mx-auto px-4 py-8 max-w-6xl">
+        <!-- 个人信息头部 -->
+        <header class="text-center mb-12 animate-fade-in">
+            <div class="glass-effect rounded-3xl p-8 mb-8 section-card">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="relative group">
+                        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary-300 dark:border-primary-600 shadow-xl group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="头像" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-4">YANG易</h1>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 dark:text-gray-300">
+                            <div class="flex items-center justify-center md:justify-start gap-2">
+                                <i class="fas fa-user text-primary-500"></i>
+                                <span>男 · 26岁</span>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start gap-2">
+                                <i class="fas fa-briefcase text-primary-500"></i>
+                                <span>AI运营</span>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start gap-2">
+                                <i class="fas fa-phone text-primary-500"></i>
+                                <span>199****8888</span>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start gap-2">
+                                <i class="fas fa-envelope text-primary-500"></i>
+                                <span>example@email.com</span>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start gap-2">
+                                <i class="fab fa-github text-primary-500"></i>
+                                <span>github.com/yannyn3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧列 -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- 教育背景 -->
+                <section class="glass-effect rounded-2xl p-6 section-card animate-slide-up">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center gap-2">
+                        <i class="fas fa-graduation-cap"></i>
+                        教育背景
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="relative pl-6 border-l-2 border-primary-300 dark:border-primary-600">
+                            <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-500 rounded-full"></div>
+                            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm">
+                                <h3 class="font-semibold text-primary-700 dark:text-primary-300">河海大学</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">2016.03 - 2021.01</p>
+                                <p class="text-sm font-medium">工程造价专业 · 本科</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">工程造价、工程制图、工程力学、结构力学、工程经济学、工程项目管理、水工建筑物等</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-6 border-l-2 border-primary-300 dark:border-primary-600">
+                            <div class="absolute -left-2 top-0 w-4 h-4 bg-accent-500 rounded-full"></div>
+                            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm">
+                                <h3 class="font-semibold text-primary-700 dark:text-primary-300">云南省水利水电学院</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">2015.09 - 2017.07</p>
+                                <p class="text-sm font-medium">工程造价专业 · 中专</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">工程造价、工程制图、工程力学、结构力学、工程经济学、CAD制图等</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 专业技能 -->
+                <section class="glass-effect rounded-2xl p-6 section-card animate-slide-up" style="animation-delay: 0.2s;">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center gap-2">
+                        <i class="fas fa-code"></i>
+                        专业技能
+                    </h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-semibold text-primary-700 dark:text-primary-300 mb-3">AI工具</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag px-3 py-1 bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 rounded-full text-sm">ChatGPT</span>
+                                <span class="skill-tag px-3 py-1 bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 rounded-full text-sm">Midjourney</span>
+                                <span class="skill-tag px-3 py-1 bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-300 rounded-full text-sm">Stable Diffusion</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-primary-700 dark:text-primary-300 mb-3">设计工具</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag px-3 py-1 bg-accent-100 dark:bg-accent-800 text-accent-700 dark:text-accent-300 rounded-full text-sm">Photoshop</span>
+                                <span class="skill-tag px-3 py-1 bg-accent-100 dark:bg-accent-800 text-accent-700 dark:text-accent-300 rounded-full text-sm">剪映</span>
+                                <span class="skill-tag px-3 py-1 bg-accent-100 dark:bg-accent-800 text-accent-700 dark:text-accent-300 rounded-full text-sm">CAD制图</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-primary-700 dark:text-primary-300 mb-3">其他技能</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm">视频拍摄</span>
+                                <span class="skill-tag px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm">编程基础</span>
+                                <span class="skill-tag px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm">自媒体运营</span>
+                                <span class="skill-tag px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm">工程造价</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧列 -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- 工作经历 -->
+                <section class="glass-effect rounded-2xl p-6 section-card animate-slide-up" style="animation-delay: 0.4s;">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center gap-2">
+                        <i class="fas fa-briefcase"></i>
+                        工作经历
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border-l-4 border-primary-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-primary-700 dark:text-primary-300">AI运营</h3>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">2023.04 - 2024.02</span>
+                            </div>
+                            <p class="text-primary-600 dark:text-primary-400 font-medium mb-3">**科技有限公司</p>
+                            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-primary-500 mt-1"></i>
+                                    <span>负责用AI绘画工具制作壁纸</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-primary-500 mt-1"></i>
+                                    <span>协助运营工作、参与视频拍摄、账号运营</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-primary-500 mt-1"></i>
+                                    <span>学习使用 ChatGPT、Midjourney、stable diffusion等AI相关软件</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-primary-500 mt-1"></i>
+                                    <span>利用AI写短视频脚本、程序制作、文章编写、AI教程编写等</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border-l-4 border-accent-500">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-primary-700 dark:text-primary-300">监理</h3>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">2020.11 - 2022.05</span>
+                            </div>
+                            <p class="text-primary-600 dark:text-primary-400 font-medium mb-3">****建设工程项目管理咨询有限公司</p>
+                            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-accent-500 mt-1"></i>
+                                    <span>主要借调在住建局工作，整理资料，协调施工现场问题等</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-accent-500 mt-1"></i>
+                                    <span>负责市政项目质量、安全监督</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-accent-500 mt-1"></i>
+                                    <span>会议纪要整理</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border-l-4 border-gray-400">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-primary-700 dark:text-primary-300">监理员</h3>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">2018.05 - 2020.07</span>
+                            </div>
+                            <p class="text-primary-600 dark:text-primary-400 font-medium mb-3">云南润晶水利水电工程</p>
+                            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-gray-500 mt-1"></i>
+                                    <span>熟悉所监理项目的合同条款、规范、设计图纸，在专业监理工程师领导下，有效开展现场监理工作</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-gray-500 mt-1"></i>
+                                    <span>担任旁站工作，发现问题及时指出并向专业监理工程师报告</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 作品项目 -->
+                <section class="glass-effect rounded-2xl p-6 section-card animate-slide-up" style="animation-delay: 0.6s;">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center gap-2">
+                        <i class="fas fa-project-diagram"></i>
+                        作品｜项目
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900 dark:to-accent-900 rounded-xl p-6 shadow-sm">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-primary-700 dark:text-primary-300">点点壁纸小程序</h3>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">2022.09 - 2023.02</span>
+                            </div>
+                            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-star text-primary-500 mt-1"></i>
+                                    <span>使用 Midjourney、stable diffusion等AI软件制作壁纸</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-star text-primary-500 mt-1"></i>
+                                    <span>在任职期间利用AI绘画出5000多张图片</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-star text-primary-500 mt-1"></i>
+                                    <span>维护小程序后台，上传壁纸等</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-star text-primary-500 mt-1"></i>
+                                    <span>根据不同分类绘画出不同类型的壁纸</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-accent-50 to-primary-50 dark:from-accent-900 dark:to-primary-900 rounded-xl p-6 shadow-sm">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-primary-700 dark:text-primary-300">AI网站运营</h3>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">2023.09 - 2024.07</span>
+                            </div>
+                            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-rocket text-accent-500 mt-1"></i>
+                                    <span>利用Midjourney、stable diffusion等软件制作图片</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-rocket text-accent-500 mt-1"></i>
+                                    <span>利用ChatGPT制作程序，提高工作效率，例如图片压缩工具，批量重命名文件名程序等</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-rocket text-accent-500 mt-1"></i>
+                                    <span>制作投票模板</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 自我评价 -->
+                <section class="glass-effect rounded-2xl p-6 section-card animate-scale-in" style="animation-delay: 0.8s;">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center gap-2">
+                        <i class="fas fa-user-circle"></i>
+                        自我评价
+                    </h2>
+                    <div class="bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-primary-900 dark:via-gray-800 dark:to-accent-900 rounded-xl p-6 shadow-sm">
+                        <div class="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+                            <p class="flex items-start gap-3">
+                                <i class="fas fa-lightbulb text-primary-500 mt-1"></i>
+                                <span>对AI有强烈的好奇心，喜欢新事物，不断尝试利用AI来提升工作效率</span>
+                            </p>
+                            <p class="flex items-start gap-3">
+                                <i class="fas fa-tools text-accent-500 mt-1"></i>
+                                <span>能使用AI写文案、脚本、简单程序、搭建网站、图片制作等</span>
+                            </p>
+                            <p class="flex items-start gap-3">
+                                <i class="fas fa-graduation-cap text-primary-500 mt-1"></i>
+                                <span>具备良好的学习能力和适应能力，能够快速掌握新知识和技能</span>
+                            </p>
+                            <p class="flex items-start gap-3">
+                                <i class="fas fa-video text-accent-500 mt-1"></i>
+                                <span>具有视频拍摄基础、编程基础、有公众号【舌语】平时会写点文章</span>
+                            </p>
+                            <p class="flex items-start gap-3">
+                                <i class="fas fa-puzzle-piece text-primary-500 mt-1"></i>
+                                <span>具备一定的创新能力和解决问题的能力，能够针对实际问题提出合理的解决方案</span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 暗黑模式检测
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 观察所有卡片元素
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // 技能标签悬停效果
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) rotate(2deg)';
+            });
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+    </script>
+</body>
+</html>
